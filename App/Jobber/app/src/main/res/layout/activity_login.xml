@@ -24,6 +24,7 @@
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
+        app:hintEnabled="false"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginusername"
@@ -41,17 +42,18 @@
         app:layout_constraintTop_toBottomOf="@+id/loginusernamefield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         app:startIconDrawable="@drawable/ic_password"
         app:startIconContentDescription="passwordicon"
         app:boxBackgroundColor="@color/textfieldBackground"
+        app:endIconMode="password_toggle"
         app:boxCornerRadiusBottomEnd="25dp"
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
-        app:endIconMode="password_toggle"
+        app:hintEnabled="false"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginpassword"
@@ -61,6 +63,7 @@
             android:fontFamily="serif"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/welcomeback"
@@ -133,5 +136,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toBottomOf="@+id/signuplink" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

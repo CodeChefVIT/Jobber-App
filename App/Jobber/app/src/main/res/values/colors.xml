@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="textfieldBackground">#66FFFFFF</color>
+    <color name="edittextborder">#708090</color>
     <color name="lightBackgroundTop">#FB8999</color>
     <color name="lightBackgroundBottom">#F8BCCF</color>
     <color name="buttonBackground">#E87068</color>
 </resources>
-
