@@ -8,4 +8,5 @@
     <color name="lightBackgroundTop">#FB8999</color>
     <color name="lightBackgroundBottom">#F8BCCF</color>
     <color name="buttonBackground">#E87068</color>
+    <color name="tabColors">#AF0671</color>
 </resources>
