@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestsActivity"></activity>
+        <activity android:name=".LiveRequestsActivity"></activity>
+        <activity android:name=".CreateRequestActivity" />
+        <activity android:name=".RequestsActivity" />
         <activity android:name=".OnBoardingActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />

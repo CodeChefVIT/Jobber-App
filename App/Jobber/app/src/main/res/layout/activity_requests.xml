@@ -4,40 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestsActivity"
-    android:background="@drawable/on_boarding_background">
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_pen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/buttonBackground"/>
+    tools:context=".RequestsActivity">
 
     <TextView
+        android:id="@+id/requestTop"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tabs"
+        android:background="@drawable/textfieldbackground"/>
+
+    <ImageView
+        android:id="@+id/requestDP"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
+        android:src="@drawable/prof"/>
+
+    <TextView
+        android:id="@+id/requestTopText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
         android:text="Requests"
-        android:textStyle="bold"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="40sp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginLeft="20dp" />
+
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/textfieldBackground"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/colorWhite"
         app:tabIndicatorColor="@color/tabColors"
-        app:tabTextColor="@color/tabColors">
+        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabTextColor="@android:color/black">
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,6 +67,16 @@
             android:gravity="center_horizontal" />
     </com.google.android.material.tabs.TabLayout>
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_pen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTintMode="src_in"
+        android:backgroundTint="@color/buttonBackground"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
