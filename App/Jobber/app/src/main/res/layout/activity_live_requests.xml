@@ -43,17 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/liverequesttop" />
 
-    <ImageView
-        android:id="@+id/editbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/liverequestdescription"
-        app:layout_constraintTop_toBottomOf="@+id/liverequesttop"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        app:srcCompat="@drawable/ic_pen"/>
 
     <EditText
         android:id="@+id/requestDesc"

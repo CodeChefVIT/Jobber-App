@@ -21,6 +21,7 @@
         android:layout_marginTop="60dp"
         android:hint="Enter the job title"
         android:textSize="40dp"
+        android:maxLength="30"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@null"/>
@@ -51,6 +52,7 @@
         android:layout_marginEnd="30dp"
         android:background="@null"
         android:hint="Enter the job description here"
+        android:maxLines="6"
         android:textSize="25dp"
         android:fontFamily="@font/nunito"/>
 
@@ -64,7 +66,6 @@
         android:backgroundTint="@color/buttonBackground"
         android:fontFamily="@font/nunito"
         android:text="Add location"
-        android:drawableEnd=""
         android:textColor="#FDE7ED"
         android:textSize="20dp"
         android:textStyle="bold"
