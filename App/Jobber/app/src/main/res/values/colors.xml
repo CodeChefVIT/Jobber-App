@@ -6,8 +6,8 @@
     <color name="textfieldBackground">#66FFFFFF</color>
     <color name="edittextborder">#708090</color>
     <color name="lightBackgroundTop">#FB8999</color>
-    <color name="lightBackgroundBottom">#F8BCCF</color>
-    <color name="buttonBackground">#E87068</color>
+    <color name="lightBackgroundBottom">#FAEAEF</color>
+    <color name="buttonBackground">#C1ED857E</color>
     <color name="tabColors">#F662C0</color>
     <color name="colorWhite">#ffffff</color>
 </resources>

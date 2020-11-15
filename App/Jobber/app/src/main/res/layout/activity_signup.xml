@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/signupback"
-        android:layout_width="30dp"
-        android:layout_height="31dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:srcCompat="@drawable/ic_back"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="19dp"

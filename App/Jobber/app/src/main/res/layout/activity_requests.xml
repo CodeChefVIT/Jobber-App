@@ -52,29 +52,16 @@
         app:tabIndicatorColor="@color/tabColors"
         app:tabIndicatorHeight="3dp"
         app:tabIndicatorFullWidth="false"
-        app:tabTextColor="@android:color/black">
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your requests"
-            android:textAlignment="center"
-            android:gravity="center_horizontal" />
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Live requests"
-            android:textAlignment="center"
-            android:gravity="center_horizontal" />
+        app:tabTextColor="@android:color/black"
+        app:tabGravity="fill">
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/requestrecyclerview"
         app:layout_constraintTop_toBottomOf="@+id/tabs"
-        app:layout_constraintStart_toStartOf="parent"
-        android:scrollbars="vertical"
-        android:layout_marginTop="220dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginTop="220dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
