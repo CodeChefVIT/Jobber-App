@@ -2,7 +2,9 @@ package com.codechefvit.jobber;
 
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +31,7 @@ public class MyRequestFragment extends Fragment {
     private RecyclerView recyclerView;
     private RequestsAdapter requestsAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private String[] ids;
     private int[] images;
     private String[] head;
     private String[] location;
@@ -69,15 +72,19 @@ public class MyRequestFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_my_request, container, false);
-        images=new int[] {R.drawable.prf1,R.drawable.prf2,R.drawable.prf3};
-        head=new String[] {"Amazon Parcel","Flipkart Parcel","Amazon Parcel"};
-        location=new String[] {"D-Annexe","Main Gate","L-Block"};
+
+        ids=new String[] {"4","5"};
+        images=new int[] {R.drawable.prof,R.drawable.prof};
+        head=new String[] {"Amazon Parcel","Flipkart Parcel"};
+        location=new String[] {"D-Annexe","Main Gate"};
+
+        //container.findViewById(R.id.addbtn).setEnabled(true);
 
         recyclerView=view.findViewById(R.id.recyclerView1);
         recyclerView.hasFixedSize();
         layoutManager=new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(layoutManager);
-        requestsAdapter=new RequestsAdapter(images,head,location,view.getContext());
+        requestsAdapter=new RequestsAdapter(ids,images,head,location,view.getContext());
         recyclerView.setAdapter(requestsAdapter);
         return view;
     }

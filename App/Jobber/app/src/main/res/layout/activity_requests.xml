@@ -73,7 +73,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:backgroundTintMode="src_in"
-        android:backgroundTint="@color/buttonBackground"/>
+        android:backgroundTint="@color/lightBackgroundTop"
+        android:contentDescription="Create" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
