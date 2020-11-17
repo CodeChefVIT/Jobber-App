@@ -24,7 +24,8 @@
         android:maxLength="30"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:background="@null"/>
+        android:background="@null"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/liverequestdescription"
@@ -52,9 +53,13 @@
         android:layout_marginEnd="30dp"
         android:background="@null"
         android:hint="Enter the job description here"
-        android:maxLines="6"
         android:textSize="25dp"
-        android:fontFamily="@font/nunito"/>
+        android:fontFamily="@font/nunito"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:minLines="4"
+        android:maxLines="8"
+        android:scrollbars="vertical"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/location"

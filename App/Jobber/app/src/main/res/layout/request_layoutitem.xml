@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="5dp">
 
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/dps"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:layout_marginLeft="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,10 +24,11 @@
         android:text="Some text"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:fontFamily="@font/nunito"
-        android:layout_toEndOf="@+id/dps"
-        android:layout_toRightOf="@+id/dps"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dps"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         />
@@ -35,13 +40,25 @@
         android:text="Location"
         android:textStyle="normal"
         android:textColor="@android:color/black"
-        android:textSize="10dp"
+        android:textSize="15dp"
         android:fontFamily="@font/nunito"
-        android:layout_below="@+id/headings"
-        android:layout_toEndOf="@+id/dps"
-        android:layout_toRightOf="@+id/dps"
+        app:layout_constraintTop_toBottomOf="@+id/headings"
+        app:layout_constraintStart_toEndOf="@+id/dps"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp" />
 
-</RelativeLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2px"
+        android:background="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/dps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locations"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

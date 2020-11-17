@@ -1,6 +1,7 @@
 package com.codechefvit.jobber;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.RequestViewHolder> {
 
+    private String[] ids;
     private int[] images;
     private String[] head;
     private String[] location;
     private Context context;
 
-    public RequestsAdapter(int[] images, String[] head, String[] location, Context context)
+    public RequestsAdapter(String[] ids,int[] images, String[] head, String[] location, Context context)
     {
+        this.ids=ids;
         this.images=images;
         this.head=head;
         this.location=location;
@@ -31,7 +34,7 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
     @Override
     public RequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.request_layoutitem,parent,false);
-        RequestViewHolder requestViewHolder=new RequestViewHolder(view,images,head,location,context);
+        RequestViewHolder requestViewHolder=new RequestViewHolder(view,ids,images,head,location,context);
         return requestViewHolder;
     }
 
@@ -44,6 +47,9 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
         holder.dp.setImageResource(imageid);
         holder.top.setText(headid);
         holder.loc.setText(locationid);
+
+        if (position==images.length-1)
+            holder.view.findViewById(R.id.divider).setVisibility(View.GONE);
     }
 
     @Override
@@ -55,26 +61,33 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
         ImageView dp;
         TextView top;
         TextView loc;
+        View view;
         Context context;
+        String[] ids;
         int[] images;
         String[] head;
         String[] location;
-        public RequestViewHolder(@NonNull View itemView, int[] images,String[] head,String[] location,Context context) {
+        public RequestViewHolder(@NonNull View itemView, String[] ids,int[] images,String[] head,String[] location,Context context) {
             super(itemView);
 
             dp=itemView.findViewById(R.id.dps);
             top=itemView.findViewById(R.id.headings);
             loc=itemView.findViewById(R.id.locations);
 
+            this.ids=ids;
             this.context=context;
             this.images=images;
             this.head=head;
             this.location=location;
+            this.view=itemView;
         }
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(context,"Task accepted",Toast.LENGTH_LONG).show();
+            int pos=getAdapterPosition();
+            Intent intent=new Intent(context,LiveRequestsActivity.class);
+            intent.putExtra("Request ID",ids[pos]);
+            context.startActivity(intent);
         }
     }
 }
