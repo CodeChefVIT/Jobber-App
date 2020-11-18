@@ -31,7 +31,7 @@ public class MyRequestFragment extends Fragment {
     private RecyclerView recyclerView;
     private RequestsAdapter requestsAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private String[] ids;
+    private int[] ids;
     private int[] images;
     private String[] head;
     private String[] location;
@@ -73,7 +73,7 @@ public class MyRequestFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_my_request, container, false);
 
-        ids=new String[] {"4","5"};
+        ids=new int[] {4,5};
         images=new int[] {R.drawable.prof,R.drawable.prof};
         head=new String[] {"Amazon Parcel","Flipkart Parcel"};
         location=new String[] {"D-Annexe","Main Gate"};

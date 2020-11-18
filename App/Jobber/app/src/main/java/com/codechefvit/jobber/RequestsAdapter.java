@@ -15,13 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.RequestViewHolder> {
 
-    private String[] ids;
+    private int[] ids;
     private int[] images;
     private String[] head;
     private String[] location;
     private Context context;
 
-    public RequestsAdapter(String[] ids,int[] images, String[] head, String[] location, Context context)
+    public RequestsAdapter(int[] ids,int[] images, String[] head, String[] location, Context context)
     {
         this.ids=ids;
         this.images=images;
@@ -57,17 +57,17 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
         return images.length;
     }
 
-    public static class RequestViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RequestViewHolder extends RecyclerView.ViewHolder{
         ImageView dp;
         TextView top;
         TextView loc;
         View view;
         Context context;
-        String[] ids;
+        int[] ids;
         int[] images;
         String[] head;
         String[] location;
-        public RequestViewHolder(@NonNull View itemView, String[] ids,int[] images,String[] head,String[] location,Context context) {
+        public RequestViewHolder(@NonNull View itemView, final int[] ids, int[] images, String[] head, String[] location, final Context context) {
             super(itemView);
 
             dp=itemView.findViewById(R.id.dps);
@@ -80,14 +80,16 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
             this.head=head;
             this.location=location;
             this.view=itemView;
-        }
 
-        @Override
-        public void onClick(View v) {
-            int pos=getAdapterPosition();
-            Intent intent=new Intent(context,LiveRequestsActivity.class);
-            intent.putExtra("Request ID",ids[pos]);
-            context.startActivity(intent);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos=getAdapterPosition();
+                    Intent intent=new Intent(context,LiveRequestsActivity.class);
+                    intent.putExtra("Request ID",ids[pos]);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

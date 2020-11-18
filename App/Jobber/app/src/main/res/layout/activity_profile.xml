@@ -8,7 +8,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="405dp"
         android:id="@+id/profilebg"
         android:background="@color/buttonBackground"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -78,15 +78,15 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/profiletopbg"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
         android:text="Pending Requests\n3"
         android:textColor="@android:color/black"
         android:fontFamily="@font/nunito"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:id="@+id/completed"
@@ -94,15 +94,15 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/profiletopbg"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
         android:text="Requests Completed\n3"
         android:textColor="@android:color/black"
         android:fontFamily="@font/nunito"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="10dp" />
 
     <TextView
         android:id="@+id/regnotitle"
