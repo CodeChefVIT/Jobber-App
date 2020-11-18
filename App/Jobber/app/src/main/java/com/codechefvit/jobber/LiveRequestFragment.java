@@ -31,7 +31,7 @@ public class LiveRequestFragment extends Fragment {
     private RecyclerView recyclerView;
     private RequestsAdapter requestsAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private String[] ids;
+    private int[] ids;
     private int[] images;
     private String[] head;
     private String[] location;
@@ -74,7 +74,7 @@ public class LiveRequestFragment extends Fragment {
 
         View view=inflater.inflate(R.layout.fragment_live_request, container, false);
 
-        ids=new String[] {"1","2","3"};
+        ids=new int[] {1,2,3};
         images=new int[] {R.drawable.prf1,R.drawable.prf2,R.drawable.prf3};
         head=new String[] {"Amazon Parcel","Flipkart Parcel","Amazon Parcel"};
         location=new String[] {"D-Annexe","Main Gate","L-Block"};

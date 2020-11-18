@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -16,23 +18,35 @@ public class LiveRequestsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_requests);
 
-        String id=getIntent().getStringExtra("Request ID");
-        if(id=="1" || id=="2" || id=="3")
+        findViewById(R.id.liverequestback).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LiveRequestsActivity.super.onBackPressed();
+            }
+        });
+
+        ImageView edit=findViewById(R.id.editdesc);
+        MaterialButton button=findViewById(R.id.close);
+        final MaterialButton btn=findViewById(R.id.save);
+        TextView compl=findViewById(R.id.completion);
+        EditText editText=findViewById(R.id.requestDesc);
+
+        int id=getIntent().getIntExtra("Request ID",0);
+        if(id==1 || id==2 || id==3)
         {
-            findViewById(R.id.editdesc).setVisibility(View.INVISIBLE);
-            MaterialButton button=findViewById(R.id.close);
-            button.setText("Save Changes");
-            findViewById(R.id.completion).setVisibility(View.INVISIBLE);
-            EditText editText=findViewById(R.id.requestDesc);
+            edit.setVisibility(View.GONE);
+            compl.setVisibility(View.GONE);
+            button.setVisibility(View.GONE);
+            btn.setVisibility(View.GONE);
             editText.setFocusable(false);
-            editText.setEnabled(false);
+            editText.setEnabled(true);
             editText.setCursorVisible(false);
         }
         else
         {
-            findViewById(R.id.editdesc).setVisibility(View.VISIBLE);
-            findViewById(R.id.completion).setVisibility(View.INVISIBLE);
-            EditText editText=findViewById(R.id.requestDesc);
+            edit.setVisibility(View.VISIBLE);
+            compl.setVisibility(View.INVISIBLE);
+            btn.setVisibility(View.GONE);
             editText.setFocusable(false);
             editText.setEnabled(false);
             editText.setCursorVisible(false);
@@ -49,9 +63,10 @@ public class LiveRequestsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     EditText editText=findViewById(R.id.requestDesc);
-                    editText.setFocusable(true);
+                    editText.setFocusableInTouchMode(true);
                     editText.setEnabled(true);
                     editText.setCursorVisible(true);
+                    btn.setVisibility(View.VISIBLE);
                 }
             });
         }
