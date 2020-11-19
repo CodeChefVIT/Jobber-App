@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/loc1"
+        android:title="Main Gate"/>
+
+    <item android:id="@+id/loc2"
+        android:title="Main Building"/>
+
+    <item android:id="@+id/loc3"
+        android:title="SMV"/>
+
+    <item android:id="@+id/loc4"
+        android:title="TT"/>
+
+    <item android:id="@+id/loc5"
+        android:title="SJT"/>
+
+    <item android:id="@+id/loc6"
+        android:title="GDN"/>
+
+    <item android:id="@+id/loc7"
+        android:title="Foodys"/>
+
+    <item android:id="@+id/loc8"
+        android:title="Greenos"/>
+
+    <item android:id="@+id/loc9"
+        android:title="P-Block"/>
+
+    <item android:id="@+id/loc10"
+        android:title="M-Block"/>
+
+    <item android:id="@+id/loc11"
+        android:title="Q-Block"/>
+
+</menu>

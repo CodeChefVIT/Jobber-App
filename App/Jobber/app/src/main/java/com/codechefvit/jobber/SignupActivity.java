@@ -19,5 +19,12 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(new Intent(SignupActivity.this,RequestsActivity.class));
             }
         });
+
+        findViewById(R.id.loginlink).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignupActivity.this,LoginActivity.class));
+            }
+        });
     }
 }
