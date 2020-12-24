@@ -56,7 +56,7 @@
 
 
     <EditText
-        android:id="@+id/requestDesc"
+        android:id="@+id/liverequestDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/liverequestdescription"
@@ -74,7 +74,7 @@
         android:scrollbars="vertical"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/save"
+        android:id="@+id/liverequestsave"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/buttonBackground"
@@ -85,13 +85,13 @@
         android:textStyle="bold"
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestDesc"
+        app:layout_constraintTop_toBottomOf="@+id/liverequestDesc"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/location"
+        android:id="@+id/liverequestlocation"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
@@ -106,14 +106,14 @@
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestDesc" />
+        app:layout_constraintTop_toBottomOf="@+id/liverequestDesc" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/close"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="45dp"
         android:backgroundTint="@color/buttonBackground"
         android:fontFamily="@font/nunito"
@@ -124,7 +124,7 @@
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+        app:layout_constraintTop_toBottomOf="@+id/liverequestlocation" />
 
     <TextView
         android:layout_width="match_parent"
@@ -152,5 +152,36 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp" />
 
+    <EditText
+        android:id="@+id/liverequesttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 : 00"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/roboto"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liverequestlocation"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/liverequestmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/roboto"
+        android:background="@null"
+        android:drawableStart="@drawable/ic_rupee_indian"
+        android:drawablePadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liverequestlocation"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

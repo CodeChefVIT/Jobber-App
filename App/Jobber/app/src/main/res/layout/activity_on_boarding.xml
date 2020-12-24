@@ -31,7 +31,7 @@
         android:fontFamily="@font/nunito"
         android:text="Solution to make your job easy"
         android:textColor="@android:color/black"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/header"
         app:layout_constraintEnd_toEndOf="parent"
