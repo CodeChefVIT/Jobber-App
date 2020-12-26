@@ -11,26 +11,25 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/nunito"
-        android:text="Welcome !"
+        android:text="Please enter the following details"
         android:textStyle="bold"
-        android:textSize="40sp"
+        android:textSize="25sp"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signupusernamefield"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
         app:startIconDrawable="@drawable/ic_person_1"
         app:startIconContentDescription="usernameicon"
         app:boxBackgroundColor="@color/textfieldBackground"
@@ -39,26 +38,26 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:hintEnabled="false"
+        app:boxStrokeColor="@color/cardview_shadow_start_color"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signupusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Name"
             android:fontFamily="serif"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:enabled="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signupregnofield"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/signupusernamefield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
         app:startIconDrawable="@drawable/ic_staff"
         app:startIconContentDescription="idcardicon"
         app:boxBackgroundColor="@color/textfieldBackground"
@@ -67,6 +66,7 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:hintEnabled="false"
+        app:boxStrokeColor="@color/cardview_shadow_start_color"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signupregno"
@@ -74,19 +74,18 @@
             android:layout_height="wrap_content"
             android:hint="Registration Number"
             android:fontFamily="serif"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:enabled="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signupphnofield"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/signupregnofield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
         app:startIconDrawable="@drawable/ic_phone"
         app:startIconContentDescription="phoneicon"
         app:boxBackgroundColor="@color/textfieldBackground"
@@ -95,6 +94,7 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:hintEnabled="false"
+        app:boxStrokeColor="@color/cardview_shadow_start_color"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signupphno"
@@ -102,19 +102,17 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number"
             android:fontFamily="serif"
-            android:inputType="text"/>
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signuproomfield"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/signupphnofield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
         app:startIconDrawable="@drawable/ic_hotel"
         app:startIconContentDescription="hotelicon"
         app:helperTextEnabled="true"
@@ -125,6 +123,7 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:hintEnabled="false"
+        app:boxStrokeColor="@color/cardview_shadow_start_color"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signuproom"
@@ -135,95 +134,48 @@
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signuppasswordfield"
-        android:layout_width="0dp"
+    <RadioGroup
+        android:id="@+id/genderradio"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/signuproomfield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:startIconDrawable="@drawable/ic_password"
-        app:startIconContentDescription="passwordicon"
-        app:boxBackgroundColor="@color/textfieldBackground"
-        app:endIconMode="password_toggle"
-        app:boxCornerRadiusBottomEnd="25dp"
-        app:boxCornerRadiusBottomStart="25dp"
-        app:boxCornerRadiusTopStart="25dp"
-        app:boxCornerRadiusTopEnd="25dp"
-        app:hintEnabled="false"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signuppassword"
-            android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:fontFamily="serif"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signupconfpasswordfield"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/signuppasswordfield"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:startIconDrawable="@drawable/ic_password"
-        app:startIconContentDescription="passwordicon"
-        app:boxBackgroundColor="@color/textfieldBackground"
-        app:endIconMode="password_toggle"
-        app:boxCornerRadiusBottomEnd="25dp"
-        app:boxCornerRadiusBottomStart="25dp"
-        app:boxCornerRadiusTopStart="25dp"
-        app:boxCornerRadiusTopEnd="25dp"
-        app:hintEnabled="false"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signupconfpassword"
-            android:layout_width="match_parent"
+            android:text="Male"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:fontFamily="serif"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:text="Female"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:checked="false"/>
+    </RadioGroup>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signupButton"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/buttonBackground"
         android:fontFamily="@font/nunito"
         android:text="Signup"
         android:textColor="#FDE7ED"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        android:textAllCaps="false"
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupconfpasswordfield" />
-
-    <TextView
-        android:id="@+id/loginlink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito"
-        android:textStyle="bold"
-        android:text="Login"
-        android:textColor="@android:color/black"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
-
+        app:layout_constraintTop_toBottomOf="@+id/genderradio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

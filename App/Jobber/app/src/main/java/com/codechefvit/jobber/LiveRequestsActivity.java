@@ -27,9 +27,9 @@ public class LiveRequestsActivity extends AppCompatActivity {
 
         ImageView edit=findViewById(R.id.editdesc);
         MaterialButton button=findViewById(R.id.close);
-        final MaterialButton btn=findViewById(R.id.save);
+        final MaterialButton btn=findViewById(R.id.liverequestsave);
         TextView compl=findViewById(R.id.completion);
-        EditText editText=findViewById(R.id.requestDesc);
+        EditText editText=findViewById(R.id.liverequestDesc);
 
         int id=getIntent().getIntExtra("Request ID",0);
         if(id==1 || id==2 || id==3)
@@ -62,7 +62,7 @@ public class LiveRequestsActivity extends AppCompatActivity {
             findViewById(R.id.editdesc).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    EditText editText=findViewById(R.id.requestDesc);
+                    EditText editText=findViewById(R.id.liverequestDesc);
                     editText.setFocusableInTouchMode(true);
                     editText.setEnabled(true);
                     editText.setCursorVisible(true);

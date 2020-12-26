@@ -2,11 +2,17 @@ package com.codechefvit.jobber;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
 
 public class CreateRequestActivity extends AppCompatActivity {
 
@@ -22,7 +28,7 @@ public class CreateRequestActivity extends AppCompatActivity {
             }
         });
 
-        final Button addloc=findViewById(R.id.location);
+        final Button addloc=findViewById(R.id.createrequestlocation);
         addloc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +42,28 @@ public class CreateRequestActivity extends AppCompatActivity {
                     }
                 });
                 pop.show();
+            }
+        });
+
+        final TextView time = findViewById(R.id.addtime);
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar=Calendar.getInstance();
+                int hour=calendar.get(Calendar.HOUR_OF_DAY);
+                final int min=calendar.get(Calendar.MINUTE);
+
+                TimePickerDialog timePickerDialog;
+                timePickerDialog=new TimePickerDialog(CreateRequestActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        if(minute>=10)
+                            time.setText(hourOfDay+" : "+minute);
+                        else
+                            time.setText(hourOfDay+" : 0"+minute);
+                    }
+                },hour,min,true);
+                timePickerDialog.show();
             }
         });
     }

@@ -10,4 +10,5 @@
     <color name="buttonBackground">#C1ED857E</color>
     <color name="tabColors">#F662C0</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="red">#F36056</color>
 </resources>

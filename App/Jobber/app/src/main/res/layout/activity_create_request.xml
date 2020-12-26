@@ -30,7 +30,7 @@
         android:inputType="text"/>
 
     <TextView
-        android:id="@+id/liverequestdescription"
+        android:id="@+id/createrequestdescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -46,10 +46,10 @@
 
 
     <EditText
-        android:id="@+id/requestDesc"
+        android:id="@+id/createrequestDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/liverequestdescription"
+        app:layout_constraintTop_toBottomOf="@+id/createrequestdescription"
         android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -64,7 +64,24 @@
         android:scrollbars="vertical"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/location"
+        android:id="@+id/liverequestsave"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/buttonBackground"
+        android:fontFamily="@font/nunito"
+        android:text="Save"
+        android:textColor="#FDE7ED"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createrequestDesc"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createrequestlocation"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
@@ -79,7 +96,7 @@
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestDesc" />
+        app:layout_constraintTop_toBottomOf="@+id/createrequestDesc" />
 
     <ImageView
         android:id="@+id/createrequestback"
@@ -91,5 +108,36 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:id="@+id/addtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00 : 00"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/roboto"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createrequestlocation"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:id="@+id/addmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/roboto"
+        android:background="@null"
+        android:drawableStart="@drawable/ic_rupee_indian"
+        android:drawablePadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createrequestlocation"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
